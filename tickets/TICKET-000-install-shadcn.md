@@ -11,7 +11,19 @@ This ticket should establish the design-system primitives and file structure the
 - Install shadcn/ui into the Vite + React + TypeScript app.
 - Add the `components.json` configuration and the initial shadcn styling hooks.
 - Configure the base theme tokens and utility files required by shadcn components.
-- Add the first reusable primitives BeatPrompt will need, such as button, input, textarea, switch, slider, badge, accordion, card, separator, and toast support if included in the chosen setup.
+- Add the first reusable primitives BeatPrompt will need for the MVP UI:
+  - `button`
+  - `input`
+  - `textarea`
+  - `switch`
+  - `slider`
+  - `badge`
+  - `accordion`
+  - `card`
+  - `separator`
+  - `toast` / `sonner` support
+  - `tooltip`
+  - `dialog` if you decide to support prompt edit overlays later
 - Verify the generated component paths fit the planned app structure.
 
 ## New Files

@@ -34,6 +34,11 @@
             "unsafeParameterDecoratorsEnabled": true
         }
     },
+    "css": {
+        "parser": {
+            "tailwindDirectives": true
+        }
+    },
     "json": {
         "parser": {
             "allowComments": true
