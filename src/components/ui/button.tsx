@@ -42,10 +42,12 @@ function Button({
     variant = 'default',
     size = 'default',
     asChild = false,
+    type = 'button',
     ...props
 }: React.ComponentProps<'button'> &
     VariantProps<typeof buttonVariants> & {
         asChild?: boolean;
+        type?: 'button' | 'submit' | 'reset';
     }) {
     const Comp = asChild ? Slot.Root : 'button';
 
@@ -55,6 +57,7 @@ function Button({
             data-variant={variant}
             data-size={size}
             className={cn(buttonVariants({ variant, size, className }))}
+            type={asChild ? undefined : type}
             {...props}
         />
     );
