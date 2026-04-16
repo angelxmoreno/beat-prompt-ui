@@ -4,6 +4,8 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import './index.css';
 import App from './App.tsx';
 
+document.documentElement.classList.add('dark');
+
 const root = document.getElementById('root');
 
 if (root === null) {

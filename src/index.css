@@ -128,3 +128,156 @@
         @apply font-sans;
     }
 }
+
+:root {
+    color-scheme: dark;
+}
+
+html,
+body {
+    min-width: 320px;
+    margin: 0;
+    background: hsl(var(--background));
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.app-shell {
+    min-height: 100vh;
+    padding: 24px;
+    background: radial-gradient(circle at top, hsl(var(--primary) / 0.08), transparent 42%), hsl(var(--background));
+    color: hsl(var(--foreground));
+}
+
+.app-shell__header,
+.app-shell__main,
+.app-shell__separator {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-shell__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.app-shell__brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+
+.app-shell__mark {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid hsl(var(--border));
+    border-radius: 12px;
+    background: hsl(var(--card));
+    color: hsl(var(--foreground));
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.app-shell__identity {
+    min-width: 0;
+}
+
+.app-shell__title-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+}
+
+.app-shell__title {
+    margin: 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+.app-shell__badge {
+    flex-shrink: 0;
+}
+
+.app-shell__subtitle {
+    margin: 4px 0 0;
+    color: hsl(var(--muted-foreground));
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.app-shell__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.app-shell__separator {
+    margin-top: 20px;
+    margin-bottom: 24px;
+}
+
+.app-shell__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.app-shell__panel {
+    min-height: 240px;
+}
+
+.app-shell__panel--featured {
+    border-color: hsl(var(--ring) / 0.4);
+}
+
+.app-shell__panel-header {
+    padding-bottom: 0;
+}
+
+.app-shell__panel-title {
+    font-size: 0.95rem;
+}
+
+.app-shell__panel-content {
+    min-height: 180px;
+}
+
+.app-shell__panel-copy {
+    margin: 0;
+    max-width: 34ch;
+    color: hsl(var(--muted-foreground));
+    line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+    .app-shell {
+        padding: 16px;
+    }
+
+    .app-shell__header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .app-shell__actions {
+        justify-content: stretch;
+    }
+
+    .app-shell__grid {
+        grid-template-columns: 1fr;
+    }
+}
