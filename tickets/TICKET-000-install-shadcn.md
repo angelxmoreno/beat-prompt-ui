@@ -21,10 +21,13 @@ This ticket should establish the design-system primitives and file structure the
   - `accordion`
   - `card`
   - `separator`
-  - `toast` / `sonner` support
+  - `sonner` support
   - `tooltip`
   - `dialog` if you decide to support prompt edit overlays later
 - Verify the generated component paths fit the planned app structure.
+- In this Vite app, place `TooltipProvider` in `src/main.tsx` around `<App />`; do not use the Next.js `app/layout.tsx` example from shadcn docs.
+- Keep the generated `slider` single-thumb, because BeatPrompt uses one BPM value rather than a range.
+- Use `sonner` for toasts; do not install the deprecated `toast` helper.
 
 ## New Files
 
